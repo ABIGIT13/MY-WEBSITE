@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+  :root {
+    --primary-color: #4f46e5;
+    --secondary-color: #f3f4f6;
+    --accent-color: #3b82f6;
+    --dark-color: #111827;
+    --light-color: #e0e7ff;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgb(79 70 229 / 0.5);
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+  header p {
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .about p {
+    font-size: 1.15rem;
+    color: #374151;
+  }
+  .projects-list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .project-card {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgb(79 70 229 / 0.25);
+  }
+  .project-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+  .project-card p {
+    flex-grow: 1;
+    color: #4b5563;
+    font-size: 1rem;
+  }
+  .project-card a {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  .project-card a:hover {
+    background-color: var(--primary-color);
+  }
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .skill {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    user-select: none;
+    box-shadow: 0 4px 10px rgb(79 70 229 / 0.4);
+    transition: transform 0.3s ease;
+  }
+  .skill:hover {
+    transform: scale(1.1);
+  }
+  .contact {
+    text-align: center;
+  }
+  .contact a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  .contact a:hover {
+    color: var(--accent-color);
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+    }
+    main {
+      margin: 1rem;
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+</head>
+<body>
+<header>
+  <h1>S.Abisheak</h1>
+  <p>Creative Developer | Problem Solver | Tech Enthusiast</p>
+</header>
+<main>
+  <section class="about" id="about">
+    <h2>About Me</h2>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
+    <img src="C:\Users\Hp\OneDrive\Pictures\Screenshots\imageskart.png.png" alt="Go Kart" style="max-width: 300px; border: 5px solid #4f46e5; border-radius: 8px;">
+    <p>
+      Hello! I'm a passionate developer with experience in building modern web applications and creating engaging user experiences. I enjoy solving complex problems and continuously learning new technologies to stay ahead in the fast-evolving tech world.
+
+    </p>
+</div>
+  </section>
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="projects-list">
+      <article class="project-card">
+        <h3>Project Alpha</h3>
+        <p>A responsive web app that helps users track their daily habits and visualize progress with interactive charts.</p>
+        <a href="https://example.com/project-alpha" target="_blank" rel="noopener">View Project</a>
+      </article>
+      <article class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A polished, modern personal portfolio website showcasing projects, skills, and contact information.</p>
+        <a href="https://abisheak.com/portfolio" target="_blank" rel="noopener">View Project</a>
+      </article>
+      <article class="project-card">
+        <h3>Task Manager</h3>
+        <p>An intuitive task management tool with drag-and-drop functionality and deadline reminders.</p>
+        <a href="https://abisheak.com/task-manager" target="_blank" rel="noopener">View Project</a>
+      </article>
+    </div>
+  </section>
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span class="skill">JavaScript</span>
+      <span class="skill">HTML5</span>
+      <span class="skill">CSS3</span>
+      <span class="skill">React</span>
+      <span class="skill">Node.js</span>
+      <span class="skill">Git</span>
+      <span class="skill">REST APIs</span>
+      <span class="skill">Responsive Design</span>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me on social media or send an email.</p>
+    <div>
+      <a href="mailto:your sabisheak99@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/s-abisheak-497390339?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBuW0XMeOQd%2B1oa048Lqjew%3D%3D" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+</main>
+<footer>
+  &copy; 2025 S.Abisheak. All rights reserved.
+</footer>
+<script>
+  // subtle fade-in animation on scroll for sections
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.1});
+
+  sections.forEach(section => {
+    section.style.opacity = 0;
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(section);
+  });
+</script>
+</body>
+</html>
+
